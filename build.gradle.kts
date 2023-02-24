@@ -34,6 +34,10 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     //webflux y reactividad
     implementation("org.springframework.boot:spring-boot-starter-webflux")
+    // Dependencias de Seguridad Lo usaremos más adelante
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    // Websocket
+    implementation("org.springframework.boot:spring-boot-starter-websocket")
 
     // Kotlin
     implementation("org.jetbrains.kotlin:kotlin-reflect")

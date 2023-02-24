@@ -11,10 +11,10 @@ CREATE TABLE IF NOT EXISTS USUARIOS
 
 );
 
-
+-- pepe1234
 INSERT INTO USUARIOS(email, nombre, password, rol)
 VALUES ('prueba@prueba.com',
-        'alex','alex1234','ADMIN');
+        'alex','$2a$12$249dkPGBT6dH46f4Dbu7ouEuO8eZ7joonzWGefPJbHH8eDpJy0oCq','ADMIN');
 
 INSERT INTO USUARIOS(email, nombre, password, rol)
 VALUES ('Staxx@prueba.com',

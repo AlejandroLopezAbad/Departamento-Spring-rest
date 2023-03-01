@@ -1,4 +1,6 @@
 DROP TABLE IF EXISTS USUARIOS;
+DROP TABLE IF EXISTS DEPARTAMENTO;
+DROP TABLE IF EXISTS EMPLEADO;
 
 -- USERS
 CREATE TABLE IF NOT EXISTS USUARIOS
@@ -9,6 +11,22 @@ CREATE TABLE IF NOT EXISTS USUARIOS
     password TEXT NOT NULL,
     rol      TEXT NOT NULL
 
+);
+
+CREATE TABLE IF NOT EXISTS DEPARTAMENTO
+(
+    id         BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nombre     TEXT      NOT NULL,
+    presupuesto FLOAT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS EMPLEADO
+(
+    id               BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nombre            TEXT      NOT NULL,
+    email            TEXT      NOT NULL,
+    avatar            TEXT      NOT NULL,
+    idDep   BIGINT NOT NULL
 );
 
 -- pepe1234
@@ -23,3 +41,13 @@ VALUES ('Staxx@prueba.com',
 INSERT INTO USUARIOS(email, nombre, password, rol)
 VALUES ('Teco@Teco.com',
         'Teco','Teco1234','ADMIN');
+
+INSERT INTO DEPARTAMENTO (id,nombre, presupuesto) VALUES (1,'Finanzas',1300.25);
+INSERT INTO DEPARTAMENTO (id,nombre, presupuesto) VALUES (2,'Tecnologia',84555.25);
+INSERT INTO DEPARTAMENTO (id,nombre, presupuesto) VALUES (3,'Desarrollo',13078890.25);
+
+
+INSERT INTO EMPLEADO(nombre, email, avatar, idDep) VALUES ('Julian','julian@julian.com','foto',1);
+INSERT INTO EMPLEADO(nombre, email, avatar, idDep) VALUES ('Dream','Dream@Dream.com','foto',2);
+INSERT INTO EMPLEADO(nombre, email, avatar, idDep) VALUES ('Ekix','Ekix@Ekix.com','foto',3);
+

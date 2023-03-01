@@ -17,9 +17,7 @@ data class Usuario(
     val password: String,
     val rol: String = Rol.USER.name //Asi lo tiene el profe
 ): UserDetails {
-    enum class Rol{
-        ADMIN,USER
-    }
+
 
     override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
         return rol.split(",").map { SimpleGrantedAuthority("ROLE_${it.trim()}") }.toMutableList()

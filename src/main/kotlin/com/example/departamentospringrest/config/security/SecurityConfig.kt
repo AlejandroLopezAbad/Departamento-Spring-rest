@@ -3,7 +3,7 @@ package com.example.departamentospringrest.config.security
 import com.example.departamentospringrest.config.security.jwt.JwtAuthenticationFilter
 import com.example.departamentospringrest.config.security.jwt.JwtAuthorizationFilter
 import com.example.departamentospringrest.config.security.jwt.JwtTokenUtils
-import com.example.departamentospringrest.services.UsuariosService
+import com.example.departamentospringrest.services.usuarios.UsuariosService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -51,6 +51,8 @@ class SecurityConfig @Autowired constructor(
             .requestMatchers("/error/**").permitAll()
             .requestMatchers("/api/**").permitAll()
             .requestMatchers("usuarios/login").permitAll()
+            .requestMatchers("/departamento").permitAll()
+            .requestMatchers("/empleados").permitAll()
 
                 //aqui van los otros endpoints
             .anyRequest().authenticated()

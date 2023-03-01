@@ -1,6 +1,6 @@
 package com.example.departamentospringrest.config.security.jwt
 
-import com.example.departamentospringrest.services.UsuariosService
+import com.example.departamentospringrest.services.usuarios.UsuariosService
 import io.netty.handler.codec.http.HttpHeaderNames
 import jakarta.servlet.FilterChain
 import jakarta.servlet.ServletException

@@ -5,10 +5,10 @@ import java.util.*
 
 @Table("Empleado")
 data class Empleado(
-    val id: Long?=null,
+    var id: Long?=null,
     val nombre: String,
     val email: String,
-    val avatar: String,
-    val departamento: Departamento
+    val avatar: String?=null,
+    var idDep: Long?=null
 ) {
 }

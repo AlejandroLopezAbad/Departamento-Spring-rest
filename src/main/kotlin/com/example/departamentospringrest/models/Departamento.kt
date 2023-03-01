@@ -7,6 +7,6 @@ import java.util.*
 data class Departamento(
     val id:Long?=null,
     val nombre:String,
-    val presupuesto:Int
+    val presupuesto:Float
 ) {
 }
